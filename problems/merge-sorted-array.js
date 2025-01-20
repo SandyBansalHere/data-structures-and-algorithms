@@ -4,23 +4,23 @@
  * arr2 = [4,6,30]
  * result = [0,3,4,4,6,30,31]
  */
-function mergeSortedArray(arrOne, arrTwo) {
-  let mergedArr = [];
+function mergeSortedArray(arr1, arr2) {
+  const arr = [];
   let i = 0;
   let j = 0;
 
-  while (arrOne[i] || arrTwo[j]) {
-    if (arrOne[i] < arrTwo[j] || arrTwo[j] === undefined) {
-      mergedArr.push(arrOne[i]);
+  while (typeof arr1[i] === "number" || typeof arr2[j] === "number") {
+    if (arr1[i] < arr2[j] || typeof arr2[j] === "undefined") {
+      arr.push(arr1[i]);
       i++;
     } else {
-      mergedArr.push(arrTwo[j]);
+      arr.push(arr2[j]);
       j++;
     }
   }
 
-  return mergedArr;
+  return arr;
 }
 
-const result = mergeSortedArray([1, 3, 4, 31], [4, 6, 30]);
+const result = mergeSortedArray([0, 3, 4, 31], [0, 6, 30]);
 console.log(result);
