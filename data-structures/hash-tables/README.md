@@ -17,3 +17,5 @@ https://en.wikipedia.org/wiki/Hash_collision
 | lookup    | O(1)  |
 | insert    | O(1)  |
 | delete    | O(1)  |
+
+\* could be O(n) with hash collision
